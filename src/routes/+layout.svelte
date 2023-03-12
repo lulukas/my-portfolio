@@ -1,5 +1,10 @@
-<script>
+<script lang="ts">
 	import '../app.css';
+	import { setLocale } from '$lib/i18n/i18n-svelte';
+	import type { LayoutData } from './$types.js';
+
+	export let data: LayoutData;
+	setLocale(data.locale);
 </script>
 
 <div class="app">
