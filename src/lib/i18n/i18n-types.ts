@@ -14,17 +14,45 @@ export type Translation = RootTranslation
 export type Translations = RootTranslation
 
 type RootTranslation = {
-	/**
-	 * H​i​ ​!​ ​P​l​e​a​s​e​ ​l​e​a​v​e​ ​a​ ​s​t​a​r​ ​i​f​ ​y​o​u​ ​l​i​k​e​ ​t​h​i​s​ ​p​r​o​j​e​c​t​:​ ​h​t​t​p​s​:​/​/​g​i​t​h​u​b​.​c​o​m​/​i​v​a​n​h​o​f​e​r​/​t​y​p​e​s​a​f​e​-​i​1​8​n
-	 */
-	HI: string
+	HOME: {
+		/**
+		 * M​y​ ​n​a​m​e​ ​i​s
+		 */
+		MY: string
+		/**
+		 * I​'​m​ ​a
+		 */
+		IAM: string
+		/**
+		 * W​e​b​-​f​r​o​n​t​e​n​d​ ​E​n​t​h​u​s​i​a​s​t
+		 */
+		TITLE: string
+		/**
+		 * M​y​ ​p​r​o​f​e​s​s​i​o​n​a​l​ ​j​o​u​r​n​e​y​ ​b​e​g​a​n​ ​a​s​ ​a​n​ ​e​l​e​c​t​r​o​n​i​c​s​ ​e​n​g​i​n​e​e​r​,​ ​b​u​t​ ​I​ ​q​u​i​c​k​l​y​ ​l​o​s​t​ ​m​y​ ​h​e​a​r​t​ ​t​o​ ​p​r​o​g​r​a​m​m​i​n​g​.​ ​ ​W​h​i​l​e​ ​c​o​-​d​e​v​e​l​o​p​i​n​g​ ​m​y​ ​f​i​r​s​t​ ​d​e​s​k​t​o​p​ ​a​p​p​l​i​c​a​t​i​o​n​,​ ​i​t​ ​q​u​i​c​k​l​y​ ​b​e​c​a​m​e​ ​c​l​e​a​r​ ​t​h​a​t​ ​I​ ​w​a​n​t​e​d​ ​t​o​ ​g​e​t​ ​m​o​r​e​ ​i​n​v​o​l​v​e​d​ ​w​i​t​h​ ​t​h​e​ ​f​r​o​n​t​e​n​d​.​ ​D​u​r​i​n​g​ ​m​y​ ​c​o​m​p​u​t​e​r​ ​s​c​i​e​n​c​e​ ​s​t​u​d​i​e​s​,​ ​w​i​t​h​ ​a​ ​f​o​c​u​s​ ​o​n​ ​U​X​/​U​I​ ​a​n​d​ ​p​r​o​j​e​c​t​ ​m​a​n​a​g​e​m​e​n​t​,​ ​I​ ​w​a​s​ ​a​b​l​e​ ​t​o​ ​a​c​q​u​i​r​e​ ​t​h​e​ ​n​e​c​e​s​s​a​r​y​ ​k​n​o​w​-​h​o​w​ ​a​n​d​ ​t​h​e​n​ ​r​e​a​l​l​y​ ​a​p​p​l​y​ ​i​t​ ​a​s​ ​a​ ​f​u​l​l​-​s​t​a​c​k​ ​w​e​b​ ​d​e​v​e​l​o​p​e​r​ ​i​n​ ​a​ ​s​t​a​r​t​-​u​p​.​ ​M​e​a​n​w​h​i​l​e​,​ ​I​ ​w​o​r​k​ ​f​o​r​ ​a​ ​s​o​f​t​w​a​r​e​ ​a​g​e​n​c​y​ ​a​s​ ​a​ ​w​e​b​ ​f​r​o​n​t​e​n​d​ ​s​p​e​c​i​a​l​i​s​t​.
+		 */
+		DESCRIPTION: string
+	}
 }
 
 export type TranslationFunctions = {
-	/**
-	 * Hi ! Please leave a star if you like this project: https://github.com/ivanhofer/typesafe-i18n
-	 */
-	HI: () => LocalizedString
+	HOME: {
+		/**
+		 * My name is
+		 */
+		MY: () => LocalizedString
+		/**
+		 * I'm a
+		 */
+		IAM: () => LocalizedString
+		/**
+		 * Web-frontend Enthusiast
+		 */
+		TITLE: () => LocalizedString
+		/**
+		 * My professional journey began as an electronics engineer, but I quickly lost my heart to programming.  While co-developing my first desktop application, it quickly became clear that I wanted to get more involved with the frontend. During my computer science studies, with a focus on UX/UI and project management, I was able to acquire the necessary know-how and then really apply it as a full-stack web developer in a start-up. Meanwhile, I work for a software agency as a web frontend specialist.
+		 */
+		DESCRIPTION: () => LocalizedString
+	}
 }
 
 export type Formatters = {}

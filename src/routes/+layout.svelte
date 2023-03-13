@@ -7,21 +7,23 @@
 	setLocale(data.locale);
 </script>
 
-<div class="app">
+<div class="flex h-screen flex-col">
 	<header>
-		<ul class="flex gap-8 py-8  ">
-			<a href="/"> <li>Home</li></a>
-			<a href="/"> <li>CV</li></a>
-			<a href="/"> <li>Projects</li></a>
-			<a href="/"> <li>About</li></a>
-		</ul>
+		<nav class="flex gap-8 p-4 lg:absolute lg:right-0 lg:flex-col lg:gap-4 lg:p-24">
+			{#each [['Home', '/'], ['CV', '/'], ['Projects', '/'], ['About', '/']] as [title, url]}
+				<a
+					href={url}
+					class="rounded-lg px-3 py-2 text-right font-medium text-slate-700 hover:bg-slate-900 hover:text-slate-100"
+					>{title}</a>
+			{/each}
+		</nav>
 	</header>
 
-	<main>
+	<main class="flex-grow">
 		<slot />
 	</main>
 
-	<footer class="">
+	<footer class="w-full bg-gray-900 p-4 text-white">
 		<p>made with ❤ by me</p>
 	</footer>
 </div>
