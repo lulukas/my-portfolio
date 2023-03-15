@@ -2,11 +2,12 @@
 	import '../app.css';
 	import LL from '$lib/i18n/i18n-svelte';
 	import ChangeLanguage from '$lib/components/ChangeLanguage.svelte';
+	import Navigation from '$lib/components/Navigation.svelte';
 </script>
 
 <div class="inline-block w-screen bg-gradient-to-br from-blue-100 to-yellow-100 text-antrazit-dark">
 	<header>
-		<div class="fixed inset-0 mx-8 mb-64 mt-16 lg:my-64 lg:mx-32 lg:max-w-[55vw]">
+		<div class="fixed inset-0 z-0 mx-8 mb-64 mt-20 lg:my-64 lg:mx-32 lg:max-w-[55vw]">
 			<h1 class=" text-xl font-extralight lg:text-3xl">
 				{$LL.HOME.MY()}
 				<span class="font-bold text-orange">Lukas Klier </span>
@@ -14,19 +15,12 @@
 			</h1>
 			<h2 class="text-3xl font-bold lg:text-5xl">{$LL.HOME.TITLE()}</h2>
 		</div>
-
-		<nav
-			class="fixed top-0 flex flex-wrap gap-4 p-4 md:gap-8 lg:right-0 lg:flex-col lg:gap-4 lg:p-24">
-			{#each [['Home', '/'], ['Experience', '/'], ['Education', '/'], ['Projects', '/'], ['About', '/']] as [title, url]}
-				<a
-					href={url}
-					class="rounded-lg px-3 py-2 text-right font-medium transition-colors duration-100 hover:bg-antrazit-light hover:text-slate-100"
-					>{title}</a>
-			{/each}
-		</nav>
+		<div class="fixed top-0 right-0 z-20 p-8 backdrop-blur-md lg:top-32 lg:right-16">
+			<Navigation />
+		</div>
 	</header>
 
-	<main>
+	<main class="relative">
 		<slot />
 	</main>
 

@@ -12,12 +12,10 @@
 		content="This is the Portfolio of Lukas Klier, your web-frontend enthusiast" />
 </svelte:head>
 
-<!-- 
 <Home />
 <Experience />
 <Education />
-<Projects /> -->
-<section class="h-[400vh]" />
+<Projects />
 
 <style lang="postcss">
 	:global(html) {
