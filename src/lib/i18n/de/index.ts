@@ -3,6 +3,11 @@ import type { Translation } from '../i18n-types';
 
 const de = {
 	...en,
+	CHANGE_LANGUAGE: {
+		LOCALE: 'en',
+		LANGUAGE: 'English',
+		THIS_WAY: 'this way',
+	},
 	HOME: {
 		MY: 'Ich heisse',
 		IAM: 'und bin',

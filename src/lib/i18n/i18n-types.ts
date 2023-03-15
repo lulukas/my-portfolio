@@ -14,6 +14,20 @@ export type Translation = RootTranslation
 export type Translations = RootTranslation
 
 type RootTranslation = {
+	CHANGE_LANGUAGE: {
+		/**
+		 * d​e
+		 */
+		LOCALE: string
+		/**
+		 * D​e​u​t​s​c​h
+		 */
+		LANGUAGE: string
+		/**
+		 * h​i​e​r​ ​e​n​t​l​a​n​g
+		 */
+		THIS_WAY: string
+	}
 	HOME: {
 		/**
 		 * M​y​ ​n​a​m​e​ ​i​s
@@ -32,9 +46,41 @@ type RootTranslation = {
 		 */
 		DESCRIPTION: string
 	}
+	EXPERIENCE: {
+		/**
+		 * W​h​a​t​ ​c​o​m​p​a​n​i​e​s​ ​h​a​v​e​ ​I​ ​w​o​r​k​e​d​ ​f​o​r​?
+		 */
+		TITLE: string
+	}
+	EDUCATION: {
+		/**
+		 * W​h​i​c​h​ ​s​c​h​o​o​l​s​ ​d​i​d​ ​I​ ​v​i​s​i​t​?
+		 */
+		TITLE: string
+	}
+	PROJECTS: {
+		/**
+		 * W​h​a​t​ ​h​a​v​e​ ​I​ ​w​o​r​k​e​d​ ​o​n​?
+		 */
+		TITLE: string
+	}
 }
 
 export type TranslationFunctions = {
+	CHANGE_LANGUAGE: {
+		/**
+		 * de
+		 */
+		LOCALE: () => LocalizedString
+		/**
+		 * Deutsch
+		 */
+		LANGUAGE: () => LocalizedString
+		/**
+		 * hier entlang
+		 */
+		THIS_WAY: () => LocalizedString
+	}
 	HOME: {
 		/**
 		 * My name is
@@ -52,6 +98,24 @@ export type TranslationFunctions = {
 		 * My professional journey began as an electronics engineer, but I quickly lost my heart to programming.  While co-developing my first desktop application, it quickly became clear that I wanted to get more involved with the frontend. During my computer science studies, with a focus on UX/UI and project management, I was able to acquire the necessary know-how and then really apply it as a full-stack web developer in a start-up. Meanwhile, I work for a software agency as a web frontend specialist.
 		 */
 		DESCRIPTION: () => LocalizedString
+	}
+	EXPERIENCE: {
+		/**
+		 * What companies have I worked for?
+		 */
+		TITLE: () => LocalizedString
+	}
+	EDUCATION: {
+		/**
+		 * Which schools did I visit?
+		 */
+		TITLE: () => LocalizedString
+	}
+	PROJECTS: {
+		/**
+		 * What have I worked on?
+		 */
+		TITLE: () => LocalizedString
 	}
 }
 
